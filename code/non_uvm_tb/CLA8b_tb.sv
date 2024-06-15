@@ -1,7 +1,7 @@
 module CLA8b_tb();
 
     reg [7:0] A, B;
-    wire signed [15:0] sum;
+    wire [15:0] sum;
 
     // Instantiate iDUT
     CLA8b iDUT(.A(A), .B(B), .cin(1'b0), .sum(sum));
@@ -10,8 +10,8 @@ module CLA8b_tb();
         int count = 0;
         int total = 0;
         #5;
-        for(int i = -128; i < 128; i++) begin
-            for(int j = -128; j < 128; j++) begin
+        for(int i = 0; i < 256; i++) begin
+            for(int j = 0; j < 256; j++) begin
                 total++;
                 #3;
                 A = i;

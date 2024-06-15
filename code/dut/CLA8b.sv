@@ -25,11 +25,7 @@ module CLA8b(
     wire C8;
     assign C8 = GG[1] | (PG[1] & GG[0]) | (PG[1] & PG[0] & cin);
 
-    // Declare and calculate the 9th bit of sum
-    wire sum_9;
-    assign sum_9 = C8 ^ A[7] ^ B[7];
-
-    // Signed extended to get 16-bit result
-    assign sum = {{8{sum_9}}, add_result};
+    // Zero extended to get 16-bit result
+    assign sum = {7'h00, C8, add_result};
 
 endmodule
