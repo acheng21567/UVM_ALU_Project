@@ -11,7 +11,7 @@ module Multiplier8b(
 
     // Declare, pipeline and select A or 0 based on B
     reg [15:0] mul_A0, mul_A1, mul_A2, mul_A3, mul_A4, mul_A5, mul_A6, mul_A7;
-    always_ff @(posedge clk, negedge rst_n) begin
+    always_ff @(posedge clk) begin
         if(~rst_n) begin
             mul_A0 <= 16'h0;
             mul_A1 <= 16'h0;
@@ -43,7 +43,7 @@ module Multiplier8b(
 
     // Pipelined the sum above
     reg [15:0] sum_reg_bit01, sum_reg_bit23, sum_reg_bit45, sum_reg_bit67;
-    always_ff @(posedge clk, negedge rst_n) begin
+    always_ff @(posedge clk) begin
         if(~rst_n) begin
             sum_reg_bit01 <= 16'h0;
             sum_reg_bit23 <= 16'h0;
@@ -65,7 +65,7 @@ module Multiplier8b(
 
     // Pipelined the sum above
     reg [15:0] sum_reg_bit0123, sum_reg_bit4567;
-    always_ff @(posedge clk, negedge rst_n) begin
+    always_ff @(posedge clk) begin
         if(~rst_n) begin
             sum_reg_bit0123 <= 16'h0;
             sum_reg_bit4567 <= 16'h0;
@@ -83,7 +83,7 @@ module Multiplier8b(
 
     // Asserted done when finish multiplying (4 cycles)
     reg done3, done2, done1;
-    always_ff @(posedge clk, negedge rst_n) begin
+    always_ff @(posedge clk) begin
         if(~rst_n) begin
             done3 <= 1'b0;
             done2 <= 1'b0;
