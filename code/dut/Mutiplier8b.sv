@@ -5,6 +5,7 @@ module Multiplier8b(
     input wire start,
     input wire [7:0] A,
     input wire [7:0] B,
+    input wire [2:0] opcode,
     output reg done,
     output wire [15:0] result
 );
@@ -91,7 +92,7 @@ module Multiplier8b(
             done <= 1'b0;
         end
         else begin
-            done3 <= start & ~done;
+            done3 <= start & ~done & (opcode == 3'b100);
             done2 <= done3 & ~done;
             done1 <= done2 & ~done;
             done <= done1 & ~done;
