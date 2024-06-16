@@ -1,4 +1,5 @@
 # This is an easy UVM project testing an ALU.
+Part of codes are from https://github.com/raysalemi/uvmprimer/tree/master.
 
 ## ALU
 The ALU takes two 8-bit inputs and output a 16-bit result. The ALU currently supports 5 operations and they are listed below.
