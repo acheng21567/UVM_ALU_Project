@@ -59,6 +59,7 @@ interface ALU_BFM();
                 while(done == 0);
                 start = 1'b0;
             end
+            alu_result = result;
         end
     endtask: send_op
 

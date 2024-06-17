@@ -1,3 +1,8 @@
+    `include "CLA4b.sv"
+    `include "CLA8b.sv"
+    `include "CLA16b.sv"
+    `include "Multiplier8b.sv"
+    
 module ALU(
     input wire clk,
     input wire rst_n,

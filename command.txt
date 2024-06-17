@@ -1,6 +1,9 @@
-cd /filespace/c/ccheng93/UVM_Learning/uvm_training_lab/labs/lab01
+cd /filespace/c/ccheng93/UVM_ALU_Project/code/oop_tb
 vlib work
 vlog +incdir+/filespace/c/ccheng93/UVM_Learning/uvm_training_lab/uvm-1.1d/src +define+UVM_NO_DPI /filespace/c/ccheng93/UVM_Learning/uvm_training_lab/uvm-1.1d/src/uvm_pkg.sv test.sv
 vlog +incdir+/filespace/c/ccheng93/UVM_Learning/uvm_training_lab/uvm-1.1d/src +define+UVM_NO_DPI /filespace/c/ccheng93/UVM_Learning/uvm_training_lab/uvm-1.1d/src/uvm_pkg.sv top.sv ../../rtl/router.v
+
+vlog +incdir+/../../dut ALU_BFM.sv ALU_pkg.sv top.sv ../../dut/ALU.sv
+
 vsim -c -lib work test +UVM_TESTNAME=my_test -do "log -r /*; run -all; quit" -l simulation.log
 vsim -c -lib work top +UVM_TESTNAME=my_test -do "log -r /*; run -all" -l simulation.log

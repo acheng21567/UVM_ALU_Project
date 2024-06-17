@@ -21,6 +21,7 @@ class scoreboard;
             endcase // case (op_set)
 
             if ((bfm.op_set != no_op) && (bfm.op_set != rst_op))
+                $display("predict: %d result: %d", predicted_result, bfm.result);
                 if (predicted_result != bfm.result)
                     $error ("FAILED: A: %0h  B: %0h  op: %s result: %0h expect: %0h",
                             bfm.A, bfm.B, bfm.op_set.name(), bfm.result, predicted_result);
