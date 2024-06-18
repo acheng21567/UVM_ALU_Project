@@ -28,3 +28,7 @@ Chapter 10 testbenches do not employ UVM frameworks; instead, they are construct
 
 #### Chapter 11 TB
 Chapter 11 testbenches integrate UVM by having components such as `add_test` and `random_test` extend `uvm_test`, while other components are implemented without UVM features.
+
+#### Chapter 12 TB
+
+Chapter 12 testbenches change `tester`, `scoreboard` and `coverage` to `uvm_component` and they are instantiated during the `build_phase` of `test`.
