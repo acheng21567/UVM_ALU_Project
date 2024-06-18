@@ -32,3 +32,7 @@ Chapter 11 testbenches integrate UVM by having components such as `add_test` and
 #### Chapter 12 TB
 
 Chapter 12 testbenches change `tester`, `scoreboard` and `coverage` to `uvm_component` and they are instantiated during the `build_phase` of `test`.
+
+#### Chapter 13 TB
+
+Chapter 13 testbenches add an `env` that extends `uvm_env` and contains other components. Also, `test` overrides `base_tester` in its build_phase().
