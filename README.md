@@ -36,3 +36,6 @@ Chapter 12 testbenches change `tester`, `scoreboard` and `coverage` to `uvm_comp
 #### Chapter 13 TB
 
 Chapter 13 testbenches add an `env` that extends `uvm_env` and contains other components. Also, `test` overrides `base_tester` in its build_phase().
+
+#### Chapter 16 TB
+Chapter 16 testbenches modify `scoreboard` and `coverage` to `uvm_subscriber` and add `result_monitor` and `command_monitor`. Since `scoreboard` is connected to two monitors, there is an `uvm_tlm_analysis_fifo` for command.
