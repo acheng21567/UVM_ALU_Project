@@ -43,3 +43,4 @@ Chapter 16 testbenches modify `scoreboard` and `coverage` to `uvm_subscriber` an
 
 #### Chapter 18 TB
 
+Chapter 18 testbenches add a new `driver` component and utilize `uvm_put_port` in tester, `uvm_get_port` in driver and `uvm_tlm_fifo` in env to send command from tester to driver.
