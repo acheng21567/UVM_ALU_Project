@@ -48,3 +48,7 @@ Chapter 18 testbenches add a new `driver` component and utilize `uvm_put_port` i
 #### Chapter 21 TB
 
 Chapter 21 testbenches change `command_s` struct to `cmd_transaction`. Now, ports send `transactions` instead of `command_s` or `shortint`.
+
+#### Chapter 23 TB
+
+Chapter 23 testbenches add multiple `sequences` and send them parallelly and sequentially.

@@ -1,0 +1,1 @@
+typedef uvm_sequencer#(sequence_item) sequencer;
